@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma dois números</title>
+</head>
+<body>
+    <h2>Digite dois números para somar</h2>
+    1º número:<br>
+    <input type="number" id="numero1"><br>
+    2º número: <br>
+    <input type="number" id="numero2"><br>
+    <button onclick="somar()">Somar</button>
+    <p id="resultado"></p>
+<script>
+    function somar(){
+       //Criando as variáveis para receber os valores dos inputs e convertendo para float
+        let numero1 = parseFloat(document.getElementById("numero1").value);
+        let numero2 = parseFloat(document.getElementById("numero2").value);
+      //Realizando a soma dos números
+        let resultado = numero1 + numero2;
+    //Exibindo o resultado na página
+        document.getElementById("resultado").innerHTML = "A soma dos números é: " + resultado;
+    }
+</script>
+</body>
+</html>
+C:\Users\Micro15\Desktop\aula2402

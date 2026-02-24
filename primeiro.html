@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programa que vai pedir um número</title>
+</head>
+<body bgcolor="red">
+   <h2>Digite um número</h2>
+   <input type="number" id="numero" placeholder="Digite um número"> 
+    <button onclick="verificar()">Verificar</button>
+    <p id="resultado"></p>
+<!--Linguagem de programnação
+JAVASCRIPT
+-->
+<script>
+    function verificar(){
+        let numero = document.getElementById("numero").value;
+            document.getElementById("resultado").innerHTML = "O número digitado foi: " + numero;
+    }
+</script>
+
+
+</body>
+</html>
