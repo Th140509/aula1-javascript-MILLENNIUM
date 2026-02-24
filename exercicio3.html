@@ -1,0 +1,84 @@
+<Crie um programa em JavaScript que receba dois números e calcule a média aritmética entre eles.>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Média</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        input {
+            padding: 10px;
+            font-size: 16px;
+            margin: 10px 0;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px 5px;
+        }
+        
+        button:hover {
+            background-color: #45a049;
+        }
+        
+        #resultado {
+            margin-top: 20px;
+            padding: 15px;
+            font-size: 20px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Calculadora de Média</h2>
+    
+    <input type="number" id="num1" placeholder="Digite o primeiro número">
+    <input type="number" id="num2" placeholder="Digite o segundo número">
+    
+    <button onclick="calcularMedia()">Calcular Média</button>
+    <button onclick="limpar()">Limpar</button>
+    
+    <div id="resultado"></div>
+
+    <script>
+        function calcularMedia() {
+            let num1 = parseFloat(document.getElementById('num1').value);
+            let num2 = parseFloat(document.getElementById('num2').value);
+            let resultado = document.getElementById('resultado');
+            
+            if (isNaN(num1) || isNaN(num2)) {
+                resultado.innerHTML = 'Por favor, digite ambos os números!';
+                resultado.style.color = 'red';
+            } else {
+                let media = (num1 + num2) / 2;
+                resultado.innerHTML = `A média dos números é: ${media}`;
+                resultado.style.color = 'black';
+            }
+        }
+
+        function limpar() {
+            document.getElementById('num1').value = '';
+            document.getElementById('num2').value = '';
+            document.getElementById('resultado').innerHTML = '';
+        }
+    </script>
+</body>
+</html>
+

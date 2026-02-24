@@ -1,0 +1,83 @@
+<Exibir um número digitado></Exibir>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exibir Número Informado</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .container {
+            background-color: #f0f0f0;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        input {
+            padding: 10px;
+            font-size: 16px;
+            margin: 10px 0;
+            width: 200px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+        }
+        
+        button:hover {
+            background-color: #45a049;
+        }
+        
+        #resultado {
+            margin-top: 20px;
+            padding: 15px;
+            font-size: 18px;
+            background-color: #fff;
+            border-radius: 5px;
+            min-height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Exibir Número Informado</h1>
+        
+        <input type="number" id="numeroInput" placeholder="Digite um número">
+        <br>
+        <button onclick="exibirNumero()">Exibir Número</button>
+        
+        <div id="resultado"></div>
+    </div>
+
+    <script>
+        function exibirNumero() {
+            let numero = document.getElementById('numeroInput').value;
+            let resultado = document.getElementById('resultado');
+            if (numero === '') {
+                resultado.innerHTML = 'Por favor, digite um número!';
+                resultado.style.color = 'red';
+            } else {
+              resultado.innerHTML = `Você digitou o número: ${numero}`;
+              resultado.style.color = 'black';
+            }
+        }
+    </script>
+</body>
+</html>

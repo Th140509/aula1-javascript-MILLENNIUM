@@ -1,0 +1,89 @@
+<Faça uma página que receba dois números e informe qual deles é o maior.>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparador de Números</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        input {
+            padding: 10px;
+            font-size: 16px;
+            margin: 10px 0;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px 5px;
+        }
+        
+        button:hover {
+            background-color: #45a049;
+        }
+        
+        #resultado {
+            margin-top: 20px;
+            padding: 15px;
+            font-size: 20px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Comparador de Números</h2>
+    
+    <input type="number" id="num1" placeholder="Digite o primeiro número">
+    <input type="number" id="num2" placeholder="Digite o segundo número">
+    
+    <button onclick="comparar()">Comparar</button>
+    <button onclick="limpar()">Limpar</button>
+    
+    <div id="resultado"></div>
+
+    <script>
+        function comparar() {
+            let num1 = parseFloat(document.getElementById('num1').value);
+            let num2 = parseFloat(document.getElementById('num2').value);
+            let resultado = document.getElementById('resultado');
+            
+            if (isNaN(num1) || isNaN(num2)) {
+                resultado.innerHTML = 'Por favor, digite ambos os números!';
+                resultado.style.color = 'red';
+                return;
+            }
+            
+            if (num1 > num2) {
+                resultado.innerHTML = `O maior número é: ${num1}`;
+            } else if (num2 > num1) {
+                resultado.innerHTML = `O maior número é: ${num2}`;
+            } else {
+                resultado.innerHTML = 'Os números são iguais!';
+            }
+            resultado.style.color = 'black';
+        }
+        
+        function limpar() {
+            document.getElementById('num1').value = '';
+            document.getElementById('num2').value = '';
+            document.getElementById('resultado').innerHTML = '';
+        }
+    </script>
+</body>
+</html>
