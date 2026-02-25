@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 16 - Soma até N</title>
+    <style>
+        body { font-family: Arial; max-width: 400px; margin: 50px auto; padding: 20px; }
+        input, button { margin: 5px 0; padding: 8px; width: 100%; }
+        button { background: #4CAF50; color: white; border: none; cursor: pointer; }
+        #resultado { margin-top: 20px; padding: 10px; background: #e7f3fe; }
+    </style>
+</head>
+<body>
+    <h2>🧩 Soma de 1 até N</h2>
+    <input type="number" id="numero" placeholder="Digite N">
+    <button onclick="calcularSoma()">Calcular</button>
+    <div id="resultado"></div>
+
+    <script>
+        function calcularSoma() {
+            let n = parseInt(document.getElementById('numero').value);
+            let soma = 0;
+            for (let i = 1; i <= n; i++) {
+                soma += i;
+            }
+            document.getElementById('resultado').innerHTML = `Soma de 1 até ${n} = ${soma}`;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 11 - Área do retângulo</title>
+    <style>
+        body { font-family: Arial; max-width: 400px; margin: 50px auto; padding: 20px; }
+        input, button { margin: 5px 0; padding: 8px; width: 100%; }
+        button { background: #4CAF50; color: white; border: none; cursor: pointer; }
+        #resultado { margin-top: 20px; padding: 10px; background: #e7f3fe; }
+    </style>
+</head>
+<body>
+    <h2>🧩 Área do retângulo</h2>
+    <input type="number" id="base" placeholder="Base">
+    <input type="number" id="altura" placeholder="Altura">
+    <button onclick="calcularArea()">Calcular</button>
+    <div id="resultado"></div>
+
+    <script>
+        function calcularArea() {
+            let base = parseFloat(document.getElementById('base').value);
+            let altura = parseFloat(document.getElementById('altura').value);
+            let area = base * altura;
+            document.getElementById('resultado').innerHTML = `Área do retângulo: ${area}`;
+        }
+    </script>
+</body>
+</html>

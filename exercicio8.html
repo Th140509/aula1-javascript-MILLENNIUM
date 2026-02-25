@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 8 - Dobro</title>
+    <style>
+        body { font-family: Arial; max-width: 400px; margin: 50px auto; padding: 20px; }
+        input, button { margin: 5px 0; padding: 8px; width: 100%; }
+        button { background: #4CAF50; color: white; border: none; cursor: pointer; }
+        #resultado { margin-top: 20px; padding: 10px; background: #e7f3fe; }
+    </style>
+</head>
+<body>
+    <h2>🧩 Dobro de um número</h2>
+    <input type="number" id="numero" placeholder="Digite um número">
+    <button onclick="calcularDobro()">Calcular</button>
+    <div id="resultado"></div>
+
+    <script>
+        function calcularDobro() {
+            let num = parseFloat(document.getElementById('numero').value);
+            let dobro = num * 2;
+            document.getElementById('resultado').innerHTML = `O dobro de ${num} é ${dobro}`;
+        }
+    </script>
+</body>
+</html>

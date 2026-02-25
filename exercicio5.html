@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios de Programação</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .exercicio {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #4CAF50;
+            margin-top: 0;
+            font-size: 1.2em;
+        }
+        input, select, button {
+            margin: 5px 0;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .resultado {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #e7f3fe;
+            border-radius: 4px;
+            color: #333;
+        }
+        .container-exercicios {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>🧩 Exercícios de Programação</h1>
+    
+    <div class="container-exercicios">
+        <div class="exercicio">
+            <h2>5️⃣ Menor entre dois números</h2>
+            <input type="number" id="num5a" placeholder="Primeiro número">
+            <input type="number" id="num5b" placeholder="Segundo número">
+            <button onclick="menorNumero()">Verificar</button>
+            <div id="resultado5" class="resultado"></div>
+        </div>

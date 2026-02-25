@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 7 - Positivo/Negativo/Zero</title>
+    <style>
+        body { font-family: Arial; max-width: 400px; margin: 50px auto; padding: 20px; }
+        input, button { margin: 5px 0; padding: 8px; width: 100%; }
+        button { background: #4CAF50; color: white; border: none; cursor: pointer; }
+        #resultado { margin-top: 20px; padding: 10px; background: #e7f3fe; }
+    </style>
+</head>
+<body>
+    <h2>🧩 Positivo, Negativo ou Zero</h2>
+    <input type="number" id="numero" placeholder="Digite um número">
+    <button onclick="verificarSinal()">Verificar</button>
+    <div id="resultado"></div>
+
+    <script>
+        function verificarSinal() {
+            let num = parseFloat(document.getElementById('numero').value);
+            let resultado;
+            if (num > 0) resultado = 'Positivo';
+            else if (num < 0) resultado = 'Negativo';
+            else resultado = 'Zero';
+            document.getElementById('resultado').innerHTML = `O número é ${resultado}`;
+        }
+    </script>
+</body>
+</html>
